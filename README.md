@@ -1,0 +1,1 @@
+- Somente abrir o projeto em um editor(Eclipse ou Netbeans) e executar.
