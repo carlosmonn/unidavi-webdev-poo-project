@@ -16,9 +16,6 @@ public class Conta {
 	private double saldo;
 	private StringBuilder extrato = new StringBuilder();
 
-	public Conta() {
-	}
-
 	public String getAgencia() {
 		return agencia;
 	}

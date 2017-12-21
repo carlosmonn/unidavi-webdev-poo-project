@@ -13,9 +13,6 @@ package pos.ProjetoFinal;
 public class Corrente extends Conta {
 	private double limite;
 
-	public Corrente() {
-	}
-
 	public double getLimite() {
 		return limite;
 	}
@@ -26,10 +23,7 @@ public class Corrente extends Conta {
 
 	@Override
 	public String addSaque(double valor) {
-		if (valor <= this.getSaldo()) {
-			movimento(-valor, "Saque");
-			return "Saque realizado com sucesso!";
-		} else if (valor <= (this.getSaldo() + this.getLimite())) {
+		if ((valor <= this.getSaldo()) || (valor <= (this.getSaldo() + this.getLimite()))) {
 			movimento(-valor, "Saque");
 			return "Saque realizado com sucesso!";
 		}

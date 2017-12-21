@@ -17,9 +17,6 @@ public class Banco {
 	private ArrayList<Cliente> cliente = new ArrayList<>();
 	private ArrayList<Funcionario> funcionario = new ArrayList<>();
 
-	public Banco() {
-	}
-
 	public String getNome() {
 		return nome;
 	}

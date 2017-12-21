@@ -13,9 +13,6 @@ package pos.ProjetoFinal;
 public class Poupanca extends Conta {
 	private double taxajuros;
 
-	public Poupanca() {
-	}
-
 	public double getTaxajuros() {
 		return taxajuros;
 	}

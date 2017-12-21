@@ -15,9 +15,6 @@ public class Pessoa {
 	private String nome;
 	private String datanascimento;
 
-	public Pessoa() {
-	}
-
 	public String getCpf() {
 		return cpf;
 	}

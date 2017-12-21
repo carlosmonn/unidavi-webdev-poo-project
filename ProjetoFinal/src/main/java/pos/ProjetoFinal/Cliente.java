@@ -14,9 +14,6 @@ public class Cliente extends Pessoa {
 	private Corrente corrente;
 	private Poupanca poupanca;
 
-	public Cliente() {
-	}
-
 	public Corrente getCorrente() {
 		return corrente;
 	}
