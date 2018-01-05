@@ -14,8 +14,8 @@ import java.util.ArrayList;
  */
 public class Banco {
 	private String nome;
-	private ArrayList<Cliente> cliente = new ArrayList<>();
-	private ArrayList<Funcionario> funcionario = new ArrayList<>();
+	private ArrayList<Cliente> cliente = new ArrayList<Cliente>();
+	private ArrayList<Funcionario> funcionario = new ArrayList<Funcionario>();
 
 	public String getNome() {
 		return nome;
