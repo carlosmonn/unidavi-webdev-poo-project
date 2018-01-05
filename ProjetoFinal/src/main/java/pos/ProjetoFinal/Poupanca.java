@@ -1,4 +1,4 @@
-package pos.ProjetoFinal;
+package pos.projetofinal;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -23,12 +23,12 @@ public class Poupanca extends Conta {
 
 	@Override
 	public String getExtrato() {
-		StringBuilder imp_extrato = new StringBuilder();
-		imp_extrato.append("------- EXTRATO - CONTA POUPANÇA -------");
-		imp_extrato.append(super.getExtrato());
-		imp_extrato.append("----------------------------------------");
+		StringBuilder impExtrato = new StringBuilder();
+		impExtrato.append("------- EXTRATO - CONTA POUPANÇA -------");
+		impExtrato.append(super.getExtrato());
+		impExtrato.append("----------------------------------------");
 
-		return imp_extrato.toString();
+		return impExtrato.toString();
 	}
 
 	public void atualizaJuros() {

@@ -1,4 +1,4 @@
-package pos.ProjetoFinal;
+package pos.projetofinal;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -63,20 +63,20 @@ public class Conta {
 	}
 
 	public String getExtrato() {
-		StringBuilder imp_extrato = new StringBuilder();
-		imp_extrato.append("\n");
-		imp_extrato.append("Agência: ");
-		imp_extrato.append(this.agencia);
-		imp_extrato.append("\n");
-		imp_extrato.append("Conta: ");
-		imp_extrato.append(this.numero);
-		imp_extrato.append("\n");
-		imp_extrato.append(this.extrato);
-		imp_extrato.append("\n");
-		imp_extrato.append("Saldo: ");
-		imp_extrato.append(this.saldo);
-		imp_extrato.append("\n");
+		StringBuilder impExtrato = new StringBuilder();
+		impExtrato.append("\n");
+		impExtrato.append("Agência: ");
+		impExtrato.append(this.agencia);
+		impExtrato.append("\n");
+		impExtrato.append("Conta: ");
+		impExtrato.append(this.numero);
+		impExtrato.append("\n");
+		impExtrato.append(this.extrato);
+		impExtrato.append("\n");
+		impExtrato.append("Saldo: ");
+		impExtrato.append(this.saldo);
+		impExtrato.append("\n");
 
-		return imp_extrato.toString();
+		return impExtrato.toString();
 	}
 }

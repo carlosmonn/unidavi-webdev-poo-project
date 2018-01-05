@@ -1,4 +1,4 @@
-package pos.ProjetoFinal;
+package pos.projetofinal;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -33,18 +33,18 @@ public class Corrente extends Conta {
 
 	@Override
 	public String getExtrato() {
-		StringBuilder imp_extrato = new StringBuilder();
-		imp_extrato.append("------- EXTRATO - CONTA CORRENTE -------");
-		imp_extrato.append(super.getExtrato());
-		imp_extrato.append("Limite: ");
-		imp_extrato.append(this.limite);
-		imp_extrato.append("\n");
-		imp_extrato.append("Limite disponível: ");
-		imp_extrato.append(this.getLimiteDisponivel());
-		imp_extrato.append("\n");
-		imp_extrato.append("----------------------------------------");
+		StringBuilder impExtrato = new StringBuilder();
+		impExtrato.append("------- EXTRATO - CONTA CORRENTE -------");
+		impExtrato.append(super.getExtrato());
+		impExtrato.append("Limite: ");
+		impExtrato.append(this.limite);
+		impExtrato.append("\n");
+		impExtrato.append("Limite disponível: ");
+		impExtrato.append(this.getLimiteDisponivel());
+		impExtrato.append("\n");
+		impExtrato.append("----------------------------------------");
 
-		return imp_extrato.toString();
+		return impExtrato.toString();
 	}
 
 	public double getLimiteDisponivel() {

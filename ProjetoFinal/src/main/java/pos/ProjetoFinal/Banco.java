@@ -1,4 +1,4 @@
-package pos.ProjetoFinal;
+package pos.projetofinal;
 
 import java.util.ArrayList;
 
@@ -25,16 +25,8 @@ public class Banco {
 		this.nome = nome;
 	}
 
-	public ArrayList<Cliente> getCliente() {
-		return cliente;
-	}
-
 	public void setCliente(Cliente cliente) {
 		this.cliente.add(cliente);
-	}
-
-	public ArrayList<Funcionario> getFuncionario() {
-		return funcionario;
 	}
 
 	public void setFuncionario(Funcionario funcionario) {
@@ -42,65 +34,65 @@ public class Banco {
 	}
 
 	public String imprimeClientes() {
-		StringBuilder imp_cliente = new StringBuilder();
+		StringBuilder impCliente = new StringBuilder();
 
-		imp_cliente.append("Lista de Clientes: ");
-		imp_cliente.append(this.nome);
-		imp_cliente.append("\n");
+		impCliente.append("Lista de Clientes: ");
+		impCliente.append(this.nome);
+		impCliente.append("\n");
 		for (Cliente c : cliente) {
 
-			imp_cliente.append("CPF: ");
-			imp_cliente.append(c.getCpf());
-			imp_cliente.append(" - ");
-			imp_cliente.append(c.getNome());
-			imp_cliente.append(" - ");
-			imp_cliente.append(c.getDatanascimento());
+			impCliente.append("CPF: ");
+			impCliente.append(c.getCpf());
+			impCliente.append(" - ");
+			impCliente.append(c.getNome());
+			impCliente.append(" - ");
+			impCliente.append(c.getDatanascimento());
 
 			if (c.getCorrente() != null) {
-				imp_cliente.append(", [Conta-corrente - Agência: ");
-				imp_cliente.append(c.getCorrente().getAgencia());
-				imp_cliente.append(", Número: ");
-				imp_cliente.append(c.getCorrente().getNumero());
-				imp_cliente.append(", Saldo: ");
-				imp_cliente.append(c.getCorrente().getSaldo());
-				imp_cliente.append("]");
+				impCliente.append(", [Conta-corrente - Agência: ");
+				impCliente.append(c.getCorrente().getAgencia());
+				impCliente.append(", Número: ");
+				impCliente.append(c.getCorrente().getNumero());
+				impCliente.append(", Saldo: ");
+				impCliente.append(c.getCorrente().getSaldo());
+				impCliente.append("]");
 			}
 
 			if (c.getPoupanca() != null) {
-				imp_cliente.append(", [Conta-poupança - Agência: ");
-				imp_cliente.append(c.getCorrente().getAgencia());
-				imp_cliente.append(", Número: ");
-				imp_cliente.append(c.getPoupanca().getNumero());
-				imp_cliente.append(", Saldo: ");
-				imp_cliente.append(c.getPoupanca().getSaldo());
-				imp_cliente.append(", Taxa de rendimento: ");
-				imp_cliente.append(c.getPoupanca().getTaxajuros());
-				imp_cliente.append("]");
+				impCliente.append(", [Conta-poupança - Agência: ");
+				impCliente.append(c.getCorrente().getAgencia());
+				impCliente.append(", Número: ");
+				impCliente.append(c.getPoupanca().getNumero());
+				impCliente.append(", Saldo: ");
+				impCliente.append(c.getPoupanca().getSaldo());
+				impCliente.append(", Taxa de rendimento: ");
+				impCliente.append(c.getPoupanca().getTaxajuros());
+				impCliente.append("]");
 			}
-			imp_cliente.append("\n");
+			impCliente.append("\n");
 		}
-		return imp_cliente.toString();
+		return impCliente.toString();
 	}
 
 	public String imprimeFuncionarios() {
-		StringBuilder imp_funcionario = new StringBuilder();
+		StringBuilder impFuncionario = new StringBuilder();
 
-		imp_funcionario.append("Lista de Funcionários: ");
-		imp_funcionario.append(this.nome);
-		imp_funcionario.append("\n");
+		impFuncionario.append("Lista de Funcionários: ");
+		impFuncionario.append(this.nome);
+		impFuncionario.append("\n");
 		for (Funcionario f : funcionario) {
 
-			imp_funcionario.append("CPF: ");
-			imp_funcionario.append(f.getCpf());
-			imp_funcionario.append(" - ");
-			imp_funcionario.append(f.getNome());
-			imp_funcionario.append(", Cargo: ");
-			imp_funcionario.append(f.getCargo());
-			imp_funcionario.append(", Salário: ");
-			imp_funcionario.append(f.getSalario());
+			impFuncionario.append("CPF: ");
+			impFuncionario.append(f.getCpf());
+			impFuncionario.append(" - ");
+			impFuncionario.append(f.getNome());
+			impFuncionario.append(", Cargo: ");
+			impFuncionario.append(f.getCargo());
+			impFuncionario.append(", Salário: ");
+			impFuncionario.append(f.getSalario());
 
-			imp_funcionario.append("\n");
+			impFuncionario.append("\n");
 		}
-		return imp_funcionario.toString();
+		return impFuncionario.toString();
 	}
 }

@@ -1,4 +1,4 @@
-package pos.ProjetoFinal;
+package pos.projetofinal;
 
 import org.junit.Test;
 
