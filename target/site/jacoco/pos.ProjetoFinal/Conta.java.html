@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Conta.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ProjetoFinal</a> &gt; <a href="index.source.html" class="el_package">pos.projetofinal</a> &gt; <span class="el_source">Conta.java</span></div><h1>Conta.java</h1><pre class="source lang-java linenums">package pos.projetofinal;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Carlos
+ */
+<span class="fc" id="L13">public class Conta {</span>
+	private String agencia;
+	private String numero;
+	private double saldo;
+<span class="fc" id="L17">	private StringBuilder extrato = new StringBuilder();</span>
+
+	public String getAgencia() {
+<span class="fc" id="L20">		return agencia;</span>
+	}
+
+	public void setAgencia(String agencia) {
+<span class="fc" id="L24">		this.agencia = agencia;</span>
+<span class="fc" id="L25">	}</span>
+
+	public String getNumero() {
+<span class="fc" id="L28">		return numero;</span>
+	}
+
+	public void setNumero(String numero) {
+<span class="fc" id="L32">		this.numero = numero;</span>
+<span class="fc" id="L33">	}</span>
+
+	public double getSaldo() {
+<span class="fc" id="L36">		return saldo;</span>
+	}
+
+	public void setSaldo(double saldo) {
+<span class="fc" id="L40">		this.saldo = saldo;</span>
+<span class="fc" id="L41">	}</span>
+
+	public void addDeposito(double valor) {
+<span class="fc" id="L44">		movimento(valor, &quot;Depósito&quot;);</span>
+<span class="fc" id="L45">	}</span>
+
+	public String addSaque(double valor) {
+<span class="fc bfc" id="L48" title="All 2 branches covered.">		if (valor &lt;= this.saldo) {</span>
+<span class="fc" id="L49">			movimento(-valor, &quot;Saque&quot;);</span>
+<span class="fc" id="L50">			return &quot;Saque realizado com sucesso!&quot;;</span>
+		}
+
+<span class="fc" id="L53">		return &quot;Saldo insuficiente!&quot;;</span>
+	}
+
+	protected void movimento(double valor, String descricao) {
+<span class="fc" id="L57">		this.saldo += valor;</span>
+
+<span class="fc" id="L59">		extrato.append(descricao);</span>
+<span class="fc" id="L60">		extrato.append(&quot; de: &quot;);</span>
+<span class="fc" id="L61">		extrato.append(Math.abs(valor));</span>
+<span class="fc" id="L62">		extrato.append(&quot;\n&quot;);</span>
+<span class="fc" id="L63">	}</span>
+
+	public String getExtrato() {
+<span class="fc" id="L66">		StringBuilder impExtrato = new StringBuilder();</span>
+<span class="fc" id="L67">		impExtrato.append(&quot;\n&quot;);</span>
+<span class="fc" id="L68">		impExtrato.append(&quot;Agência: &quot;);</span>
+<span class="fc" id="L69">		impExtrato.append(this.agencia);</span>
+<span class="fc" id="L70">		impExtrato.append(&quot;\n&quot;);</span>
+<span class="fc" id="L71">		impExtrato.append(&quot;Conta: &quot;);</span>
+<span class="fc" id="L72">		impExtrato.append(this.numero);</span>
+<span class="fc" id="L73">		impExtrato.append(&quot;\n&quot;);</span>
+<span class="fc" id="L74">		impExtrato.append(this.extrato);</span>
+<span class="fc" id="L75">		impExtrato.append(&quot;\n&quot;);</span>
+<span class="fc" id="L76">		impExtrato.append(&quot;Saldo: &quot;);</span>
+<span class="fc" id="L77">		impExtrato.append(this.saldo);</span>
+<span class="fc" id="L78">		impExtrato.append(&quot;\n&quot;);</span>
+
+<span class="fc" id="L80">		return impExtrato.toString();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>

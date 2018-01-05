@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Poupanca.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ProjetoFinal</a> &gt; <a href="index.source.html" class="el_package">pos.projetofinal</a> &gt; <span class="el_source">Poupanca.java</span></div><h1>Poupanca.java</h1><pre class="source lang-java linenums">package pos.projetofinal;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Carlos
+ */
+<span class="fc" id="L13">public class Poupanca extends Conta {</span>
+	private double taxajuros;
+
+	public double getTaxajuros() {
+<span class="fc" id="L17">		return taxajuros;</span>
+	}
+
+	public void setTaxajuros(double taxajuros) {
+<span class="fc" id="L21">		this.taxajuros = taxajuros;</span>
+<span class="fc" id="L22">	}</span>
+
+	@Override
+	public String getExtrato() {
+<span class="fc" id="L26">		StringBuilder impExtrato = new StringBuilder();</span>
+<span class="fc" id="L27">		impExtrato.append(&quot;------- EXTRATO - CONTA POUPANÇA -------&quot;);</span>
+<span class="fc" id="L28">		impExtrato.append(super.getExtrato());</span>
+<span class="fc" id="L29">		impExtrato.append(&quot;----------------------------------------&quot;);</span>
+
+<span class="fc" id="L31">		return impExtrato.toString();</span>
+	}
+
+	public void atualizaJuros() {
+<span class="fc" id="L35">		double juros = this.getSaldo() * (this.taxajuros / 100);</span>
+<span class="fc" id="L36">		movimento(juros, &quot;Rendimento&quot;);</span>
+<span class="fc" id="L37">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>
